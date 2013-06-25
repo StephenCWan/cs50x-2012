@@ -1,0 +1,20 @@
+0.  a lung disease caused by inhaling very fine silica dust
+1.  returns the resource usage measurements for a specified target, such as the current process, children processes, or specific threads
+2.  16 members
+3.  If we passed by value, then there would be a copy of the variable made each time, a waste of resources (especially since getrusage measures resource usage, we want to minimize its own memory footprint)
+4.  The loop utilizes the for loop's structure to continually get new characters ia fgetc until an EOF, 
+    denoting the end of the file is reached. This loop continually picks up letters from the stream until 
+    a newline is found. If an illegal character is found before then, then the loop dumps the rest of that 
+    certain string by throwing away all of the data until the next newline character.
+    
+    The loop collects the characters in a string by storing them into a temporary buffer that is at least as long as the longest word
+    in the dictionary (by arbitrary convention), and passing that data into the checking function, placing a null byte to denote the end of the string in memory. This data
+    is used for all of the strings checked, saving memory.
+5.  If we used fscanf, we would have to retroactively check whether or not illegal characters made it into the string
+6.  We don't want those functions changing the value of the string, so the const keyword protects from that
+7.  I used a trie that was composed of nodes with two members: an array to pointers to mode nodes, and a marker to indicate whether there exists a
+    word at that certain point. Each trie represents a letter possibility that points to more possible letters. Combination paths that don't exist are
+    simply NULL pointers to conserve space.
+8.  The total running time was 3.04 on the first run
+9.  Instead of allocated locations that did not necessarily need to exist in the trie, I changed it to only allocate spaces as needed for words that existed 
+10. It seems impossible to lower the allocation time of the trie itself.

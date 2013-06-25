@@ -1,0 +1,19 @@
+0.  .jpg supports 2^24 (roughly 16.8 million) colors, .gif supports having 256 different colors at once, .png supports 2^24 (roughly 16.8 million) colors, and .bmp supports 2^24 (roughly 16.8 million) colors at once
+1.  .gif and .png support transparency
+2.  lossless compression will produce a perfect copy of an image, while lossy compression may produce an in-exact reproduction that has minute loss in quality
+3.  jpeg uses lossy compression
+4.  FAT marks the file's directory entry as deleted, then marks all of the clusters used by that file as free for use by other files
+5.  overwritting the user data with a couple passes of randomized data
+6.  stdint.h is the standard library for integer types, which includes byte-specific definitions for different integer types
+7.  using these types guarantees that the structures will be exactly the number of bits wide, ensuring that the data structure in code aligns with the file format properly
+8.  a BYTE is 1 byte, a DWORD is 4 bytes, a LONG is 4 bytes, and a WORD is 2 bytes
+9.  in ASCII, the first two bytes must represent BM
+10. biSize is the size of the BITMAPINFOHEADER, whereas bfSize is the size of the entire file
+11. if the biHeight is negative, then that means the image is stored from the top of the image to the bottom of the image, whereas is biHeight was positive, it would be bottom to top
+12. biBitCount represents the color depth in bits
+13. fopen would return NULL if the file did not actually exist
+14. the third argument represents how many times to read the number of bytes specified in argument 2, so we only want it to read once.
+15. 3
+16. fseek moves the location of where the stream is currently being read forwards or backwards from a certain location
+17. SEEK_CUR is a special constant that represents the current location that the stream is pointing at when using fseek
+18. Fozzie Bear
